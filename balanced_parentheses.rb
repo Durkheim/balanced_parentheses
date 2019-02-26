@@ -4,7 +4,7 @@ class BalancedParentheses
   CLOSED_PARENS = ")"
 
   def initialize(str)
-    @str = str
+    @str = str.to_s
   end
 
   def balanced?
@@ -46,6 +46,4 @@ class BalancedParentheses
     collection_of_parens.select { |paren| paren == CLOSED_PARENS }.count
   end
 end
-
-
 
