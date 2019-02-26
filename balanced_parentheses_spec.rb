@@ -11,6 +11,10 @@ describe BalancedParentheses do
         expect(BalancedParentheses.new("(())").balanced?).to be true
         expect(BalancedParentheses.new("(())").balanced?).to be true
         expect(BalancedParentheses.new("(())").balanced?).to be true
+        expect(BalancedParentheses.new("sadfasdfasdfasdfas(assdfasdfasdfasd(23423413)[]{}//sacedfds...)").balanced?).to be true
+        
+        # no parentheses is still balanced
+        expect(BalancedParentheses.new("").balanced?).to be true
       end
     end
 
