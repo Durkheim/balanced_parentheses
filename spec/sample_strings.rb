@@ -11,6 +11,6 @@ BALANCED_STRINGS = [
 UNBALANCED_STRINGS = [
   ")(",
   "())",
-  ")",
+  ")"
 ].shuffle.freeze
 

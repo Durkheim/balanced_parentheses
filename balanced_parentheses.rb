@@ -1,7 +1,7 @@
 class BalancedParentheses
 
-  OPEN_PARENS = "("
-  CLOSED_PARENS = ")"
+  OPEN_PARENS = "(".freeze
+  CLOSED_PARENS = ")".freeze
 
   def initialize(str)
     @str = str.to_s
