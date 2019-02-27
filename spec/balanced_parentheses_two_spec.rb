@@ -31,7 +31,10 @@ describe BalancedParenthesesTwo do
       it "should convert the structures to strings and handle appropriately" do
         expect(klass.new(nil).balanced?).to be true
         expect(klass.new(1234567).balanced?).to be true
+        expect(klass.new(1234567.21).balanced?).to be true
         expect(klass.new((1..5)).balanced?).to be true
+        expect(klass.new([]).balanced?).to be true
+        expect(klass.new({}).balanced?).to be true
       end
     end
   end
