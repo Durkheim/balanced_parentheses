@@ -12,7 +12,7 @@ Write an algorithm that returns that determines whether parentheses in a string 
 
 Two implementations have been written for this challenge.
 
-The first, `BalancedParentheses::ObjectOriented`, provides a series of object-oriented approaches, with several methods assuming single-responsibility.
+The first provides a series of object-oriented approaches, with several methods assuming single-responsibility.
 An array of only parentheses is constructed from the string, and from there, there are checks to see if the count of open and closed parens match,
 as well as whether the order of parens is balanced. To execute this implementation, call the following:
 
