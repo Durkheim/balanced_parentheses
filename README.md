@@ -41,7 +41,7 @@ rspec spec/
 You can also run each test individually:
 
 ```
-rspec spec/{spec_file}.rb
+rspec spec/balanced_parentheses/{spec_file}.rb
 ```
 
 ### Notes
