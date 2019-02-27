@@ -26,7 +26,7 @@ describe "Benchmarking#balanced?" do
       ].shuffle
     }
 
-  context "when comparing the optimized solution against the unopitmized solution" do
+  context "when comparing the performance of the optimized solution against the unopitmized solution" do
 
 
     let(:sample_balanced_string) { balanced_strings.sample }
@@ -42,8 +42,8 @@ describe "Benchmarking#balanced?" do
       }
     }
 
-    it "should generally peform similarly when checking if balanced strings" do
-      expect(balanced_optimized_performance).to be_within(0.1).of(balanced_unoptimized_performance)
+    it "should be within 1 millisecond when evaluating a balanced string" do
+      expect(balanced_optimized_performance).to be_within(0.001).of(balanced_unoptimized_performance)
     end
 
 
@@ -59,8 +59,8 @@ describe "Benchmarking#balanced?" do
       }
     }
 
-    it "should generally perform similarly when checking unbalanced strings" do
-      expect(unbalanced_optimized_performance).to be_within(0.1).of(unbalanced_unoptimized_performance)
+    it "should be within 1 millisecond when evaluating a balanced string" do
+      expect(unbalanced_optimized_performance).to be_within(0.001).of(unbalanced_unoptimized_performance)
     end
   end  
 end

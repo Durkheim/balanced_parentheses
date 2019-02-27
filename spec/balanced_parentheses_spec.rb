@@ -20,7 +20,7 @@ describe BalancedParentheses do
     let(:unbalanced_strings) {
       [
         ")(",
-        "())",
+        "(sadfasdfasdfaCNWKQR;EFQ3ERFLD;AFNSDKXZCNXZCKWOMIDFGH;SKDNCSDKCN;SDKCNKSZMX;lsamcisdfhilweandkawndjkaw;nsac wdlvncklsdncksDNckJScxz;kZJxcksndfwdsflaksdjcksjdzcxkZJxcs(()",
         ")",
       ].shuffle
     }
