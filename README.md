@@ -12,12 +12,12 @@ Write an algorithm that returns that determines whether parentheses in a string 
 
 Two implementations have been written for this challenge.
 
-The first, `BalancedParentheses`, provides a series of object-oriented approaches, with several methods assuming single-responsibility.
+The first, `BalancedParentheses::ObjectOriented`, provides a series of object-oriented approaches, with several methods assuming single-responsibility.
 An array of only parentheses is constructed from the string, and from there, there are checks to see if the count of open and closed parens match,
 as well as whether the order of parens is balanced. To execute this implementation, call the following:
 
 ```
-BalancedParentheses.new(str).balanced?
+BalancedParentheses::ObjectOriented.new(str).balanced?
 ```
 
 The second implementation splits the string into an array of chars, iterates through the array, and keeps a ledger of whether a string is balanced.
@@ -25,13 +25,13 @@ After iterating is complete, if the ledger is not 0, then the string has unbalan
 following:
 
 ```
-BalancedParenthesesTwo.new(str).balanced?
+BalancedParentheses::Ledger.new(str).balanced?
 ```
 
 ### Testing
 
 For each implementation, specs were written to handle a variety of balanced and unbalanced cases. In addition, a benchmarking spec was written,
-highlighting that each implementation's performance is within 1 millisecond of the other. More often than not, the second implementation was marginally faster.
+highlighting that each implementation's performance is within 1 millisecond of the other. More often than not, the ledger implementation was marginally faster.
 To run all tests from the root of the project directory, run the following from the terminal:
 
 ```

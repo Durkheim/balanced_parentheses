@@ -1,9 +1,9 @@
-require_relative "../balanced_parentheses"
+require_relative "../../balanced_parentheses/object_oriented"
 require_relative "sample_strings"
 
-describe BalancedParentheses do
+describe BalancedParentheses::ObjectOriented do
 
-  let(:klass) { BalancedParentheses }
+  let(:klass) { BalancedParentheses::ObjectOriented }
 
   describe "#balanced?" do
 

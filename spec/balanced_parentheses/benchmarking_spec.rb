@@ -1,12 +1,12 @@
-require_relative "../balanced_parentheses"
-require_relative "../balanced_parentheses_two"
+require_relative "../../balanced_parentheses/object_oriented"
+require_relative "../../balanced_parentheses/ledger"
 require_relative "sample_strings"
 
 require "benchmark"
 
-describe "Benchmarking#balanced?" do
-  let(:object_oriented_implementation) { BalancedParentheses }
-  let(:ledger_implementation) { BalancedParenthesesTwo }
+describe "Benchmarking #balanced?" do
+  let(:object_oriented_implementation) { BalancedParentheses::ObjectOriented }
+  let(:ledger_implementation) { BalancedParentheses::Ledger }
   
 
   context "when comparing the performance of implementations" do

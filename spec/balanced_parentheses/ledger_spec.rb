@@ -1,9 +1,9 @@
-require_relative "../balanced_parentheses_two"
+require_relative "../../balanced_parentheses/ledger"
 require_relative "sample_strings"
 
-describe BalancedParenthesesTwo do
+describe BalancedParentheses::Ledger do
 
-  let(:klass) { BalancedParenthesesTwo }
+  let(:klass) { BalancedParentheses::Ledger }
 
   describe "#balanced?" do
 
