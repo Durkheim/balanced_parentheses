@@ -1,8 +1,8 @@
-require_relative "../optimized_balanced_parentheses"
+require_relative "../balanced_parentheses_two"
 
-describe OptimizedBalancedParentheses do
+describe BalancedParenthesesTwo do
 
-  let(:klass) { OptimizedBalancedParentheses }
+  let(:klass) { BalancedParenthesesTwo }
 
   describe "#balanced?" do
 

@@ -1,4 +1,4 @@
-require_relative "balanced_parentheses"
+require_relative "../balanced_parentheses"
 
 describe BalancedParentheses do
 

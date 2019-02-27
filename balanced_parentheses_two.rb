@@ -1,4 +1,4 @@
-class OptimizedBalancedParentheses
+class BalancedParenthesesTwo
 
   OPEN_PARENS = "("
   CLOSED_PARENS = ")"
