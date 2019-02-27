@@ -1,4 +1,5 @@
 require_relative "../balanced_parentheses_two"
+require_relative "sample_strings"
 
 describe BalancedParenthesesTwo do
 
@@ -6,41 +7,22 @@ describe BalancedParenthesesTwo do
 
   describe "#balanced?" do
 
-    let(:balanced_strings) { 
-      [
-        "()",
-        "(()())",
-        "(())",
-        "sadfasdfasdfasdfas(assdfasdfasdfasd(23423413)[]{}//sacedfds...)",
-        "(()())()",
-        "",
-      ].shuffle
-    }
-
-    let(:unbalanced_strings) { 
-      [
-        ")(",
-        "(sadfasdfasdfaCNWKQR;EFQ3ERFLD;AFNSDKXZCNXZCKWOMIDFGH;SKDNCSDKCN;SDKCNKSZMX;lsamcisdfhilweandkawndjkaw;nsac wdlvncklsdncksDNckJScxz;kZJxcksndfwdsflaksdjcksjdzcxkZJxcs(()",
-        ")",
-      ].shuffle
-    } 
-
     context "when a string contains balanced parentheses" do
       it "should return true" do
-        expect(klass.new(balanced_strings[0]).balanced?).to be true
-        expect(klass.new(balanced_strings[1]).balanced?).to be true
-        expect(klass.new(balanced_strings[2]).balanced?).to be true
-        expect(klass.new(balanced_strings[3]).balanced?).to be true
-        expect(klass.new(balanced_strings[4]).balanced?).to be true
-        expect(klass.new(balanced_strings[5]).balanced?).to be true
+        expect(klass.new(BALANCED_STRINGS[0]).balanced?).to be true
+        expect(klass.new(BALANCED_STRINGS[1]).balanced?).to be true
+        expect(klass.new(BALANCED_STRINGS[2]).balanced?).to be true
+        expect(klass.new(BALANCED_STRINGS[3]).balanced?).to be true
+        expect(klass.new(BALANCED_STRINGS[4]).balanced?).to be true
+        expect(klass.new(BALANCED_STRINGS[5]).balanced?).to be true
       end
     end
 
     context "when a string contains unbalanced parentheses" do
       it "should return false" do
-        expect(klass.new(unbalanced_strings[0]).balanced?).to be false
-        expect(klass.new(unbalanced_strings[1]).balanced?).to be false
-        expect(klass.new(unbalanced_strings[2]).balanced?).to be false
+        expect(klass.new(UNBALANCED_STRINGS[0]).balanced?).to be false
+        expect(klass.new(UNBALANCED_STRINGS[1]).balanced?).to be false
+        expect(klass.new(UNBALANCED_STRINGS[2]).balanced?).to be false
       end
     end
 

@@ -1,5 +1,7 @@
 require_relative "../balanced_parentheses"
 require_relative "../balanced_parentheses_two"
+require_relative "sample_strings"
+
 require "benchmark"
 
 describe "Benchmarking#balanced?" do
@@ -7,29 +9,10 @@ describe "Benchmarking#balanced?" do
   let(:second_implementation) { BalancedParenthesesTwo }
   
 
-  let(:balanced_strings) { 
-      [
-        "()",
-        "(()())",
-        "(())",
-        "sadfasdfasdfasdfas(assdfasdfasdfasd(23423413)[]{}//sacedfds...)",
-        "(()())()",
-        "",
-      ].shuffle
-    }
-
-    let(:unbalanced_strings) { 
-      [
-        ")(",
-        "())",
-        ")",
-      ].shuffle
-    }
-
   context "when comparing the performance of the optimized solution against the unopitmized solution" do
 
 
-    let(:sample_balanced_string) { balanced_strings.sample }
+    let(:sample_balanced_string) { BALANCED_STRINGS.sample }
     
 
     let(:balanced_unoptimized_performance) { Benchmark.realtime {
@@ -47,7 +30,7 @@ describe "Benchmarking#balanced?" do
     end
 
 
-    let(:sample_unbalanced_string) { unbalanced_strings.sample }
+    let(:sample_unbalanced_string) { UNBALANCED_STRINGS.sample }
 
     let(:unbalanced_unoptimized_performance) { Benchmark.realtime {
         first_implementation.new(:sample_unbalanced_string).balanced?
