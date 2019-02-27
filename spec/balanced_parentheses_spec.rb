@@ -1,4 +1,4 @@
-require_relative "../balanced_parentheses"
+require_relative "balanced_parentheses"
 
 describe BalancedParentheses do
 
@@ -6,24 +6,41 @@ describe BalancedParentheses do
 
   describe "#balanced?" do
 
+    let(:balanced_strings) {
+      [
+        "()",
+        "(()())",
+        "(())",
+        "sadfasdfasdfasdfas(assdfasdfasdfasd(23423413)[]{}//sacedfds...)",
+        "(()())()",
+        "",
+      ].shuffle
+    }
+
+    let(:unbalanced_strings) {
+      [
+        ")(",
+        "())",
+        ")",
+      ].shuffle
+    }
+
     context "when a string contains balanced parentheses" do
       it "should return true" do
-        expect(klass.new("()").balanced?).to be true
-        expect(klass.new("(()())").balanced?).to be true
-        expect(klass.new("(())").balanced?).to be true
-        expect(klass.new("(()())()").balanced?).to be true
-        expect(klass.new("sadfasdfasdfasdfas(assdfasdfasdfasd(23423413)[]{}//sacedfds...)").balanced?).to be true
-
-        # no parentheses is still balanced
-        expect(klass.new("").balanced?).to be true
+        expect(klass.new(balanced_strings[0]).balanced?).to be true
+        expect(klass.new(balanced_strings[1]).balanced?).to be true
+        expect(klass.new(balanced_strings[2]).balanced?).to be true
+        expect(klass.new(balanced_strings[3]).balanced?).to be true
+        expect(klass.new(balanced_strings[4]).balanced?).to be true
+        expect(klass.new(balanced_strings[5]).balanced?).to be true
       end
     end
 
     context "when a string contains unbalanced parentheses" do
       it "should return false" do
-        expect(klass.new(")(").balanced?).to be false
-        expect(klass.new("())").balanced?).to be false
-        expect(klass.new("())").balanced?).to be false
+        expect(klass.new(unbalanced_strings[0]).balanced?).to be false
+        expect(klass.new(unbalanced_strings[1]).balanced?).to be false
+        expect(klass.new(unbalanced_strings[2]).balanced?).to be false
       end
     end
 
