@@ -2,7 +2,7 @@
 
 ### Objective
 
-Write an algorithm that returns that determines whether parentheses in a string are balanced.
+Write an algorithm that determines whether parentheses in a string are balanced.
 
 ### Requirements
 
